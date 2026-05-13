@@ -1,0 +1,185 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:0.3s;
+}
+
+.chat-container{
+  width:380px;
+  height:600px;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  display:flex;
+  flex-direction:column;
+}
+
+.chat-header{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  padding:15px;
+}
+
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.bot-info{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+#clock{
+  margin-top:8px;
+  font-size:14px;
+}
+
+#themeBtn{
+  background:white;
+  border:none;
+  padding:8px 10px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.chat-box{
+  flex:1;
+  padding:15px;
+  overflow-y:auto;
+  background:#f8fafc;
+}
+
+.bot-message,
+.user-message{
+  padding:12px 15px;
+  margin:10px 0;
+  border-radius:15px;
+  max-width:80%;
+  animation:fadeIn 0.3s ease;
+  line-height:1.5;
+}
+
+.bot-message{
+  background:#e2e8f0;
+  color:#111827;
+}
+
+.user-message{
+  background:#2563eb;
+  color:white;
+  margin-left:auto;
+}
+
+.input-area{
+  display:flex;
+  padding:10px;
+  background:white;
+  border-top:1px solid #ddd;
+}
+
+input{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#f1f5f9;
+  outline:none;
+  font-size:15px;
+}
+
+button{
+  margin-left:10px;
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#1d4ed8;
+}
+
+.dark-mode{
+  background:#020617;
+}
+
+.dark-mode .chat-container{
+  background:#0f172a;
+}
+
+.dark-mode .chat-box{
+  background:#1e293b;
+}
+
+.dark-mode .bot-message{
+  background:#334155;
+  color:white;
+}
+
+.dark-mode input{
+  background:#334155;
+  color:white;
+}
+
+.dark-mode .input-area{
+  background:#0f172a;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .chat-container{
+    width:95%;
+    height:90vh;
+  }
+
+  .bot-info{
+    font-size:17px;
+  }
+
+  input{
+    font-size:14px;
+  }
+
+  button{
+    padding:10px;
+  }
+
+}

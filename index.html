@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> IB AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+  <div class="chat-header">
+
+    <div class="header-top">
+      <div class="bot-info">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" class="avatar">
+        <span> IB  AI Assistant</span>
+      </div>
+
+      <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <p id="clock"></p>
+
+  </div>
+
+  <div class="chat-box" id="chatBox">
+
+    <div class="bot-message">
+      Hello! I am your AI Assistant.
+    </div>
+
+  </div>
+
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
